@@ -8,9 +8,10 @@ function App() {
 
   return (
     <div className="App container">
-      <h4 className="bg-primary">App Component</h4>
-      <User />
-      <Navbar />
+      <Navbar tittle="User App2" />
+      <hr />
+      <User name="Qurban" salary="1000" depatment="IT" />
+      <User name="Kenan" salary="2000" depatment="IT" />
     </div>
   );
 }

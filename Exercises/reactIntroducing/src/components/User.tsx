@@ -2,12 +2,14 @@ import React, { Component } from "react";
 
 class User extends Component {
   render() {
+    const(name,salary,department)=this.props
     return (
       <div>
-        <form>
-          <input type="text" />
-          <button>Send</button>
-        </form>
+        <ul>
+          <li>Ad : {name}</li>
+          <li>Departament :{depatment}</li>
+          <li>Maas : {salary}</li>
+        </ul>
       </div>
     );
   }
