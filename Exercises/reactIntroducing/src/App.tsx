@@ -6,10 +6,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <h4>App Component</h4>
-      <User />
-      <User />
+    <div className="App container">
+      <h4 className="bg-primary">App Component</h4>
       <User />
     </div>
   );
