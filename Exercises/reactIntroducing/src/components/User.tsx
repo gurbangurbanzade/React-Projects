@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class User extends Component {
   render() {
-    const(name,salary,department)=this.props
+    const(name:string,salary:string,department:string)=this.props as object
     return (
       <div>
         <ul>
