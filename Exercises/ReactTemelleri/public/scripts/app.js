@@ -57,11 +57,23 @@ function renderApp() {
 
 
 function saat() {
-  var template4 = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Time"), /*#__PURE__*/React.createElement("h2", null, Date()));
-  ReactDOM.render(template4, root);
+  var template4 = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Time"), /*#__PURE__*/React.createElement("h2", null, Date())); //   ReactDOM.render(template4, root);
 }
 
 saat();
 setInterval(function () {
   saat();
-}, 1000);
+}, 1000); // Template 5
+
+function render() {
+  var arr = [1, 2, 3, 4];
+  var item = arr.map(function (arr) {
+    return /*#__PURE__*/React.createElement("li", {
+      key: arr.toString()
+    }, arr);
+  });
+  var template5 = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("ul", null, item));
+  ReactDOM.render(template5, root);
+}
+
+render();

@@ -78,10 +78,27 @@ function saat() {
       <h2>{Date()}</h2>
     </div>
   );
-  ReactDOM.render(template4, root);
+  //   ReactDOM.render(template4, root);
 }
 
 saat();
 setInterval(() => {
   saat();
 }, 1000);
+
+// Template 5
+
+function render() {
+  let arr = [1, 2, 3, 4];
+  let item = arr.map((arr) => {
+    return <li key={arr.toString()}>{arr}</li>;
+  });
+  let template5 = (
+    <div>
+      <ul>{item}</ul>
+    </div>
+  );
+  ReactDOM.render(template5, root);
+}
+
+render();
