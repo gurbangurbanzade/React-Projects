@@ -1,6 +1,9 @@
+// terminala bunu yaziriq
+// npx babel src/app.js --out-file=public/scripts/app.js
+
 //JSX
 let root = document.querySelector("#root");
-
+// Template 1
 let template = (
   <div>
     <h1>Hello World</h1>
@@ -10,14 +13,9 @@ let template = (
       <li>Lorem, ipsum.</li>
       <li>Lorem, ipsum.</li>
     </ul>
-    let template2 =
-    <div>
-      <h2 id="product-name">name: Iphone</h2>
-      <p id="product-price">price: 2000</p>
-      <p id="product-description">Description: Good phone</p>
-    </div>
   </div>
 );
+// Template 2
 let product = {
   //   name: "Iphone",
   price: 3000,
@@ -42,7 +40,48 @@ let template2 = (
   </div>
 );
 
-ReactDOM.render(template2, root);
+// Template 3
+let number = 0;
+let up = () => {
+  number++;
+  renderApp();
+  return console.log("salam");
+};
+let down = () => {
+  number--;
+  renderApp();
+  return console.log("salam");
+};
 
-// terminala bunu yaziriq
-// npx babel src/app.js --out-file=public/scripts/app.js
+function renderApp() {
+  let template3 = (
+    <div>
+      <h1>Number {number}</h1>
+      <button id="btnUp" className="btnBlue" onClick={up}>
+        +1
+      </button>
+      <button id="btnDown" className="btnRed" onClick={down}>
+        -1
+      </button>
+    </div>
+  );
+  ReactDOM.render(template3, root);
+}
+
+// renderApp();
+
+// Template 4
+function saat() {
+  let template4 = (
+    <div>
+      <h1>Time</h1>
+      <h2>{Date()}</h2>
+    </div>
+  );
+  ReactDOM.render(template4, root);
+}
+
+saat();
+setInterval(() => {
+  saat();
+}, 1000);

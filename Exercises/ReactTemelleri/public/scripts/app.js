@@ -1,14 +1,12 @@
 "use strict";
 
+// terminala bunu yaziriq
+// npx babel src/app.js --out-file=public/scripts/app.js
 //JSX
-var root = document.querySelector("#root");
-var template = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Hello World"), /*#__PURE__*/React.createElement("div", null, "Lorem, ipsum dolor."), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Lorem, ipsum."), /*#__PURE__*/React.createElement("li", null, "Lorem, ipsum."), /*#__PURE__*/React.createElement("li", null, "Lorem, ipsum.")), "let template2 =", /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
-  id: "product-name"
-}, "name: Iphone"), /*#__PURE__*/React.createElement("p", {
-  id: "product-price"
-}, "price: 2000"), /*#__PURE__*/React.createElement("p", {
-  id: "product-description"
-}, "Description: Good phone")));
+var root = document.querySelector("#root"); // Template 1
+
+var template = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Hello World"), /*#__PURE__*/React.createElement("div", null, "Lorem, ipsum dolor."), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Lorem, ipsum."), /*#__PURE__*/React.createElement("li", null, "Lorem, ipsum."), /*#__PURE__*/React.createElement("li", null, "Lorem, ipsum."))); // Template 2
+
 var product = {
   //   name: "Iphone",
   price: 3000,
@@ -27,6 +25,43 @@ var template2 = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React
   id: "product-name"
 }, "name: ", product.name ? product.name : "no name"), product.price && product.price > 0 ? /*#__PURE__*/React.createElement("p", {
   id: "product-price"
-}, "price: ", product.price, " AZN") : "", getDesctription(product.description));
-ReactDOM.render(template2, root); // terminala bunu yaziriq
-// npx babel src/app.js --out-file=public/scripts/app.js
+}, "price: ", product.price, " AZN") : "", getDesctription(product.description)); // Template 3
+
+var number = 0;
+
+var up = function up() {
+  number++;
+  renderApp();
+  return console.log("salam");
+};
+
+var down = function down() {
+  number--;
+  renderApp();
+  return console.log("salam");
+};
+
+function renderApp() {
+  var template3 = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Number ", number), /*#__PURE__*/React.createElement("button", {
+    id: "btnUp",
+    className: "btnBlue",
+    onClick: up
+  }, "+1"), /*#__PURE__*/React.createElement("button", {
+    id: "btnDown",
+    className: "btnRed",
+    onClick: down
+  }, "-1"));
+  ReactDOM.render(template3, root);
+} // renderApp();
+// Template 4
+
+
+function saat() {
+  var template4 = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Time"), /*#__PURE__*/React.createElement("h2", null, Date()));
+  ReactDOM.render(template4, root);
+}
+
+saat();
+setInterval(function () {
+  saat();
+}, 1000);
