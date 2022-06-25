@@ -18,11 +18,27 @@ let template = (
     </div>
   </div>
 );
+let product = {
+  //   name: "Iphone",
+  price: 3000,
+  description: "Good Phone",
+};
+
+function getDesctription(description) {
+  if (description) {
+    return <p id="product-description">Description: {description}</p>;
+  }
+}
+
 let template2 = (
   <div>
-    <h2 id="product-name">name: Iphone</h2>
-    <p id="product-price">price: 2000</p>
-    <p id="product-description">Description: Good phone</p>
+    <h2 id="product-name">name: {product.name ? product.name : "no name"}</h2>
+    {product.price && product.price > 0 ? (
+      <p id="product-price">price: {product.price} AZN</p>
+    ) : (
+      ""
+    )}
+    {getDesctription(product.description)}
   </div>
 );
 
