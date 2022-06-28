@@ -79,21 +79,33 @@ var Todolist = /*#__PURE__*/function (_React$Component3) {
 
   var _super3 = _createSuper(Todolist);
 
-  function Todolist() {
+  function Todolist(props) {
+    var _this;
+
     _classCallCheck(this, Todolist);
 
-    return _super3.apply(this, arguments);
+    _this = _super3.call(this, props);
+    _this.clearItems = _this.clearItems.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Todolist, [{
+    key: "clearItems",
+    value: function clearItems() {
+      console.log(this.props.items);
+      console.log("salam");
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement("ul", null, this.props.items.map(function (item, index) {
+      return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("ul", null, this.props.items.map(function (item, index) {
         return /*#__PURE__*/React.createElement(TodoItem, {
           key: index,
           item: item
         });
-      }));
+      })), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("button", {
+        onClick: this.clearItems
+      }, "Clear Items")));
     }
   }]);
 
@@ -133,13 +145,23 @@ var Action = /*#__PURE__*/function (_React$Component5) {
   }
 
   _createClass(Action, [{
+    key: "onFormSubmit",
+    value: function onFormSubmit(e) {
+      e.preventDefault();
+      var item = e.target.elements.txtItem.value;
+      console.log(e.target.elements.txtItem.value);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("button", null, "Clear Items")), /*#__PURE__*/React.createElement("form", {
-        action: ""
+      return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
+        onSubmit: this.onFormSubmit
       }, /*#__PURE__*/React.createElement("input", {
-        type: "text"
-      }), /*#__PURE__*/React.createElement("button", null, "Add Item")));
+        type: "text",
+        name: "txtItem"
+      }), /*#__PURE__*/React.createElement("button", {
+        onClick: this.addItems
+      }, "Add Item")));
     }
   }]);
 
