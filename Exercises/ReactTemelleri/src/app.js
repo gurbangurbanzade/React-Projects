@@ -1,14 +1,27 @@
 class TodoApp extends React.Component {
+  constructor(probs) {
+    super(probs);
+    this.clearItems = this.clearItems.bind(this);
+    this.state = {
+      items: ["item 1", "item 2", "item 3", "item 4"],
+    };
+  }
+
+  clearItems() {
+    console.log("clear");
+    this.setState({
+      items: [],
+    });
+  }
   render() {
     const app = {
       title: "Todo Application",
       description: "lorem ipsum dolar",
-      items: ["item1", "item2", "item3", "item4"],
     };
     return (
       <div>
         <Header description={app.title} add={app.description} />
-        <Todolist items={app.items} />
+        <Todolist items={this.state.items} clearItems={this.clearItems} />
         <Action />
       </div>
     );
@@ -27,14 +40,6 @@ class Header extends React.Component {
 }
 
 class Todolist extends React.Component {
-  constructor(props) {
-    super(props);
-    this.clearItems = this.clearItems.bind(this);
-  }
-  clearItems() {
-    console.log(this.props.items);
-    console.log("salam");
-  }
   render() {
     return (
       <div>
@@ -44,7 +49,7 @@ class Todolist extends React.Component {
           })}
         </ul>
         <p>
-          <button onClick={this.clearItems}>Clear Items</button>
+          <button onClick={this.props.clearItems}>Clear Items</button>
         </p>
       </div>
     );
@@ -59,7 +64,7 @@ class Action extends React.Component {
   onFormSubmit(e) {
     e.preventDefault();
     const item = e.target.elements.txtItem.value;
-    console.log(e.target.elements.txtItem.value);
+    console.log();
   }
   render() {
     return (
