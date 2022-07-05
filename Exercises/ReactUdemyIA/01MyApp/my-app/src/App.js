@@ -8,7 +8,11 @@ function App() {
     <div className="App">
       <Salamla />
       <Form />
-      <Kimlik />
+      <Kimlik name="Qurban " />
+      <Kimlik name="Kenan " surname="Qurbanzade" />
+      <Kimlik>
+        <p>Bu bir children elementdir</p>
+      </Kimlik>
     </div>
   );
 }
