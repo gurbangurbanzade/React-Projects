@@ -2,17 +2,26 @@ class TodoApp extends React.Component {
   constructor(probs) {
     super(probs);
     this.clearItems = this.clearItems.bind(this);
+    this.addItem = this.addItem.bind(this);
+
     this.state = {
-      items: ["item 1", "item 2", "item 3", "item 4"],
+      items: ["item 1", "item 2", "item 3"],
     };
   }
 
   clearItems() {
-    console.log("clear");
     this.setState({
       items: [],
     });
   }
+
+  addItem(item) {
+    this.setState((prevState) => {
+      return { items: prevState.items.concat(item) };
+    });
+    console.log("item");
+  }
+
   render() {
     const app = {
       title: "Todo Application",
@@ -22,7 +31,7 @@ class TodoApp extends React.Component {
       <div>
         <Header description={app.title} add={app.description} />
         <Todolist items={this.state.items} clearItems={this.clearItems} />
-        <Action />
+        <Action addItem={this.addItem} />
       </div>
     );
   }
@@ -61,17 +70,23 @@ class TodoItem extends React.Component {
   }
 }
 class Action extends React.Component {
+  constructor(probs) {
+    super(probs);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+  }
   onFormSubmit(e) {
     e.preventDefault();
     const item = e.target.elements.txtItem.value;
-    console.log();
+    if (item) {
+      this.props.addItem(item);
+    }
   }
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit}>
+        <form onSubmit={this.props.onFormSubmit}>
           <input type="text" name="txtItem" />
-          <button onClick={this.addItems}>Add Item</button>
+          <button onClick={this.props.addItem}>Add Item</button>
         </form>
       </div>
     );

@@ -34,8 +34,9 @@ var TodoApp = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, probs);
     _this.clearItems = _this.clearItems.bind(_assertThisInitialized(_this));
+    _this.addItem = _this.addItem.bind(_assertThisInitialized(_this));
     _this.state = {
-      items: ["item 1", "item 2", "item 3", "item 4"]
+      items: ["item 1", "item 2", "item 3"]
     };
     return _this;
   }
@@ -43,10 +44,19 @@ var TodoApp = /*#__PURE__*/function (_React$Component) {
   _createClass(TodoApp, [{
     key: "clearItems",
     value: function clearItems() {
-      console.log("clear");
       this.setState({
         items: []
       });
+    }
+  }, {
+    key: "addItem",
+    value: function addItem(item) {
+      this.setState(function (prevState) {
+        return {
+          items: prevState.items.concat(item)
+        };
+      });
+      console.log("item");
     }
   }, {
     key: "render",
@@ -61,7 +71,9 @@ var TodoApp = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/React.createElement(Todolist, {
         items: this.state.items,
         clearItems: this.clearItems
-      }), /*#__PURE__*/React.createElement(Action, null));
+      }), /*#__PURE__*/React.createElement(Action, {
+        addItem: this.addItem
+      }));
     }
   }]);
 
@@ -143,10 +155,14 @@ var Action = /*#__PURE__*/function (_React$Component5) {
 
   var _super5 = _createSuper(Action);
 
-  function Action() {
+  function Action(probs) {
+    var _this2;
+
     _classCallCheck(this, Action);
 
-    return _super5.apply(this, arguments);
+    _this2 = _super5.call(this, probs);
+    _this2.onFormSubmit = _this2.onFormSubmit.bind(_assertThisInitialized(_this2));
+    return _this2;
   }
 
   _createClass(Action, [{
@@ -154,18 +170,21 @@ var Action = /*#__PURE__*/function (_React$Component5) {
     value: function onFormSubmit(e) {
       e.preventDefault();
       var item = e.target.elements.txtItem.value;
-      console.log();
+
+      if (item) {
+        this.props.addItem(item);
+      }
     }
   }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
-        onSubmit: this.onFormSubmit
+        onSubmit: this.props.onFormSubmit
       }, /*#__PURE__*/React.createElement("input", {
         type: "text",
         name: "txtItem"
       }), /*#__PURE__*/React.createElement("button", {
-        onClick: this.addItems
+        onClick: this.props.addItem
       }, "Add Item")));
     }
   }]);
