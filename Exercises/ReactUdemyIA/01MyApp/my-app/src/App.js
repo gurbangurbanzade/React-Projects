@@ -2,6 +2,7 @@ import "./App.css";
 import Salamla from "./Components/Salamla";
 import Form from "./Components/Form";
 import Kimlik from "./Components/Kimlik";
+import Tema from "./Components/Tema";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Kimlik>
         <p>Bu bir children elementdir</p>
       </Kimlik>
+      <Tema />
     </div>
   );
 }
