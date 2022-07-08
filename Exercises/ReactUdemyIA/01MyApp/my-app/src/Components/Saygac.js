@@ -35,7 +35,6 @@ export class Saygac extends Component {
         <h1>Saygac: {this.state.saygac} </h1>
         <button onClick={() => this.artirSay()}>Artir</button>
         <button onClick={() => this.ikiArtirSay()}>iki Artir</button>
-
         <button onClick={() => this.azaltSay()}>Azalt</button>
       </div>
     );
