@@ -7,9 +7,12 @@ import Saygac from "./Components/Saygac";
 import FunctionalEventHandling from "./Components/FunctionalEventHandling";
 import ClassEvent from "./Components/ClassEvent";
 import Bind from "./Components/Bind";
+import Parent from "./Components/Parent";
 function App() {
   return (
     <div className="App">
+      <Parent />
+      <hr />
       <Bind />
       <hr />
       <Salamla />
