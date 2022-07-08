@@ -4,7 +4,8 @@ import Form from "./Components/Form";
 import Kimlik from "./Components/Kimlik";
 import Tema from "./Components/Tema";
 import Saygac from "./Components/Saygac";
-
+import FunctionalEventHandling from "./Components/FunctionalEventHandling";
+import ClassEvent from "./Components/ClassEvent";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
       </Kimlik>
       <Tema />
       <Saygac />
+      <FunctionalEventHandling />
+      <ClassEvent />
     </div>
   );
 }
