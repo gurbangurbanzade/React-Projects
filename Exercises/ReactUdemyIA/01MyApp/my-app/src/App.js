@@ -6,9 +6,12 @@ import Tema from "./Components/Tema";
 import Saygac from "./Components/Saygac";
 import FunctionalEventHandling from "./Components/FunctionalEventHandling";
 import ClassEvent from "./Components/ClassEvent";
+import Bind from "./Components/Bind";
 function App() {
   return (
     <div className="App">
+      <Bind />
+      <hr />
       <Salamla />
       <Form />
       <Kimlik name="Qurban " />
