@@ -3,6 +3,7 @@ import Salamla from "./Components/Salamla";
 import Form from "./Components/Form";
 import Kimlik from "./Components/Kimlik";
 import Tema from "./Components/Tema";
+import Saygac from "./Components/Saygac";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <p>Bu bir children elementdir</p>
       </Kimlik>
       <Tema />
+      <Saygac />
     </div>
   );
 }
