@@ -10,9 +10,15 @@ import Bind from "./Components/Bind";
 import Parent from "./Components/Parent";
 import SertliRender from "./Components/SertliRender";
 import ArrayRender from "./Components/ArrayRender";
+import Stil from "./Components/Stil";
+import Inline from "./Components/Inline";
 function App() {
   return (
     <div className="App">
+      <Inline />
+      <hr />
+      <Stil />
+      <hr />
       <ArrayRender />
       <hr />
       <SertliRender />
