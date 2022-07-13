@@ -8,9 +8,12 @@ import FunctionalEventHandling from "./Components/FunctionalEventHandling";
 import ClassEvent from "./Components/ClassEvent";
 import Bind from "./Components/Bind";
 import Parent from "./Components/Parent";
+import SertliRender from "./Components/SertliRender";
 function App() {
   return (
     <div className="App">
+      <SertliRender />
+      <hr />
       <Parent />
       <hr />
       <Bind />
