@@ -12,9 +12,13 @@ import SertliRender from "./Components/SertliRender";
 import ArrayRender from "./Components/ArrayRender";
 import Stil from "./Components/Stil";
 import Inline from "./Components/Inline";
+import SimpleForm from "./Components/SimpleForm";
+
 function App() {
   return (
     <div className="App">
+      <SimpleForm />
+      <hr />
       <Inline />
       <hr />
       <Stil />
