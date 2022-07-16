@@ -14,9 +14,12 @@ import Stil from "./Components/Stil";
 import Inline from "./Components/Inline";
 import SimpleForm from "./Components/SimpleForm";
 import Saygac1 from "./Components/LifeCycleMethods/Saygac1";
+import Timer from "./Components/LifeCycleMethods/Timer";
 function App() {
   return (
     <div className="App">
+      <Timer />
+      <hr />
       <Saygac1 />
       <hr />
       <SimpleForm />
