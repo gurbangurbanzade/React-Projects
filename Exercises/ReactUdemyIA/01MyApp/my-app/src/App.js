@@ -13,10 +13,12 @@ import ArrayRender from "./Components/ArrayRender";
 import Stil from "./Components/Stil";
 import Inline from "./Components/Inline";
 import SimpleForm from "./Components/SimpleForm";
-
+import Saygac1 from "./Components/LifeCycleMethods/Saygac1";
 function App() {
   return (
     <div className="App">
+      <Saygac1 />
+      <hr />
       <SimpleForm />
       <hr />
       <Inline />
