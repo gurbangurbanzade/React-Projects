@@ -27,11 +27,17 @@ export class ToDoApp extends Component {
       });
     }
   };
+  removeToDo = (name) => {
+    const filtered = this.state.tasks.filter((task) => task.name !== name);
+    this.setState({
+      tasks: filtered,
+    });
+  };
   render() {
     return (
       <div>
         <ToDo addToDo={this.addToDo} />
-        <ToDoList tasks={this.state.tasks} />
+        <ToDoList tasks={this.state.tasks} removeToDo={this.removeToDo} />
       </div>
     );
   }

@@ -8,7 +8,9 @@ export class ToDoList extends Component {
           return (
             <div key={task.id}>
               <li>{task.name}</li>
-              <button>Delete</button>
+              <button onClick={() => this.props.removeToDo(task.name)}>
+                Delete
+              </button>
             </div>
           );
         })}
