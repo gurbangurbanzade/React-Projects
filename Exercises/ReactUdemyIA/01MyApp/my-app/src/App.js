@@ -15,14 +15,22 @@ import "./App.css";
 // import SimpleForm from "./Components/SimpleForm";
 // import Saygac1 from "./Components/02-LifeCycleMethods/Saygac1";
 // import Timer from "./Components/LifeCycleMethods/Timer";
-import GetPost from "./Components/03-Api/GetPost";
-// import Get from "./Components/03-Api/Get";
+// import GetPost from "./Components/03-Api/GetPost";
+// import ExchangeApp from "./Components/03-Api/ExchangeApp";
+import CompA from "./Components/04-ContexApi/Components/CompA";
+import { newContext } from "./Components/04-ContexApi/Contex/NewContext";
+import { oldContext } from "./Components/04-ContexApi/Contex/NewContext";
 
 function App() {
   return (
     <div className="App">
-      {/* <Get /> */}
-      <GetPost />
+      <oldContext.Provider value={"kenan"}>
+        <newContext.Provider value={{ ad: "qurban", soyad: "qurbanzade" }}>
+          <CompA />
+        </newContext.Provider>
+      </oldContext.Provider>
+      {/* <ExchangeApp /> */}
+      {/* <GetPost /> */}
       {/* <Timer /> */}
       {/* <Saygac1 /> */}
       {/* <SimpleForm /> */}
