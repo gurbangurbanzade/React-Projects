@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { newContext } from "../Contex/NewContext";
+import CompD from "./CompD";
 export class CompC extends Component {
   render() {
     return (
@@ -10,6 +11,7 @@ export class CompC extends Component {
             return <p>{info.ad + " " + info.soyad}</p>;
           }}
         </newContext.Consumer>
+        <CompD />
       </div>
     );
   }
