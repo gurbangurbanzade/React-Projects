@@ -1,4 +1,5 @@
 import "./App.css";
+import ObjectUseState from "./Components/05-UseState/ObjectUseState";
 // import Salamla from "./Components/Salamla";
 // import Form from "./Components/Form";
 // import Kimlik from "./Components/Kimlik";
@@ -20,12 +21,13 @@ import "./App.css";
 // import CompA from "./Components/04-ContexApi/Components/CompA";
 // import { newContext } from "./Components/04-ContexApi/Contex/NewContext";
 // import { oldContext } from "./Components/04-ContexApi/Contex/NewContext";
-import Saygac from "./Components/05-UseState/Saygac";
+// import Saygac from "./Components/05-UseState/Saygac";
 
 function App() {
   return (
     <div className="App">
-      <Saygac />
+      <ObjectUseState />
+      {/* <Saygac /> */}
       {/* <oldContext.Provider value={"kenan"}>
         <newContext.Provider value={{ ad: "qurban", soyad: "qurbanzade" }}>
           <CompA />
