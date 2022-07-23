@@ -17,18 +17,20 @@ import "./App.css";
 // import Timer from "./Components/LifeCycleMethods/Timer";
 // import GetPost from "./Components/03-Api/GetPost";
 // import ExchangeApp from "./Components/03-Api/ExchangeApp";
-import CompA from "./Components/04-ContexApi/Components/CompA";
-import { newContext } from "./Components/04-ContexApi/Contex/NewContext";
-import { oldContext } from "./Components/04-ContexApi/Contex/NewContext";
+// import CompA from "./Components/04-ContexApi/Components/CompA";
+// import { newContext } from "./Components/04-ContexApi/Contex/NewContext";
+// import { oldContext } from "./Components/04-ContexApi/Contex/NewContext";
+import Saygac from "./Components/05-UseState/Saygac";
 
 function App() {
   return (
     <div className="App">
-      <oldContext.Provider value={"kenan"}>
+      <Saygac />
+      {/* <oldContext.Provider value={"kenan"}>
         <newContext.Provider value={{ ad: "qurban", soyad: "qurbanzade" }}>
           <CompA />
         </newContext.Provider>
-      </oldContext.Provider>
+      </oldContext.Provider> */}
       {/* <ExchangeApp /> */}
       {/* <GetPost /> */}
       {/* <Timer /> */}
