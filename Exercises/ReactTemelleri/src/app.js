@@ -35,6 +35,9 @@ class TodoApp extends React.Component {
       </div>
     );
   }
+  componentDidMount() {
+    console.log("salams");
+  }
 }
 
 class Header extends React.Component {
@@ -81,6 +84,7 @@ class Action extends React.Component {
       this.props.addItem(item);
     }
   }
+
   render() {
     return (
       <div>

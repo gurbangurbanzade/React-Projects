@@ -15,6 +15,9 @@ export class ToDo extends Component {
       input: "",
     });
   };
+  componentDidMount() {
+    console.log("salam");
+  }
   render() {
     return (
       <div>

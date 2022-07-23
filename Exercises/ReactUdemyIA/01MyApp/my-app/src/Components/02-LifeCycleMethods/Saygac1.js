@@ -11,9 +11,9 @@ export class Saygac1 extends Component {
   componentDidMount() {
     document.title = this.state.klik;
   }
-  componentDidUpdate() {
-    document.title = this.state.klik;
-  }
+  // componentDidUpdate() {
+  //   document.title = this.state.klik;
+  // }
   render() {
     return (
       <div>
