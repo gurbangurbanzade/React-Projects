@@ -1,5 +1,6 @@
 import "./App.css";
-import ObjectUseState from "./Components/05-UseState/ObjectUseState";
+import DataFetch from "./Components/05-UseState/DataFetch";
+// import ObjectUseState from "./Components/05-UseState/ObjectUseState";
 // import Salamla from "./Components/Salamla";
 // import Form from "./Components/Form";
 // import Kimlik from "./Components/Kimlik";
@@ -26,7 +27,8 @@ import ObjectUseState from "./Components/05-UseState/ObjectUseState";
 function App() {
   return (
     <div className="App">
-      <ObjectUseState />
+      <DataFetch />
+      {/* <ObjectUseState /> */}
       {/* <Saygac /> */}
       {/* <oldContext.Provider value={"kenan"}>
         <newContext.Provider value={{ ad: "qurban", soyad: "qurbanzade" }}>
