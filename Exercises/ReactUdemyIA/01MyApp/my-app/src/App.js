@@ -1,5 +1,6 @@
 import "./App.css";
-import BookProjects from "./Components/05-UseState/BookProjects";
+import HookSaygac from "./Components/06-UseEffect/HookSaygac";
+// import BookProjects from "./Components/05-UseState/BookProjects";
 // import DataFetch from "./Components/05-UseState/DataFetch";
 // import ObjectUseState from "./Components/05-UseState/ObjectUseState";
 // import Salamla from "./Components/Salamla";
@@ -28,7 +29,9 @@ import BookProjects from "./Components/05-UseState/BookProjects";
 function App() {
   return (
     <div className="App">
-      <BookProjects />
+      <HookSaygac />
+
+      {/* <BookProjects /> */}
       {/* <DataFetch /> */}
       {/* <ObjectUseState /> */}
       {/* <Saygac /> */}
