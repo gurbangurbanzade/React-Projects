@@ -1,5 +1,6 @@
 import "./App.css";
-import HookSaygac from "./Components/06-UseEffect/HookSaygac";
+import UseReducer from "./Components/07-UseReduce/UseReducer";
+// import HookSaygac from "./Components/06-UseEffect/HookSaygac";
 // import BookProjects from "./Components/05-UseState/BookProjects";
 // import DataFetch from "./Components/05-UseState/DataFetch";
 // import ObjectUseState from "./Components/05-UseState/ObjectUseState";
@@ -29,8 +30,8 @@ import HookSaygac from "./Components/06-UseEffect/HookSaygac";
 function App() {
   return (
     <div className="App">
-      <HookSaygac />
-
+      <UseReducer />
+      {/* <HookSaygac /> */}
       {/* <BookProjects /> */}
       {/* <DataFetch /> */}
       {/* <ObjectUseState /> */}
