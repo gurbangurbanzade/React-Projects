@@ -1,12 +1,13 @@
 import React, { useMemo } from "react";
 
-const Memo = ({ data }) => {
+const Memo = ({ number, increment }) => {
   console.log("memo Update");
   return (
     <div>
-      Number-
+      UseCalback
       <br />
-      <h1>{JSON.stringify(data)}</h1>
+      <h1>{number}</h1>
+      <button onClick={increment}>Artir</button>
     </div>
   );
 };

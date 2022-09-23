@@ -4,6 +4,7 @@ import Memo from "./components/Memo";
 import { useState } from "react";
 import { useMemo } from "react";
 import UseMemo from "./components/UseMemo";
+import { useCallback } from "react";
 
 function App() {
   const [number, setNumber] = useState(0);
@@ -12,17 +13,17 @@ function App() {
     return { name: "qurban", number: number };
   }, [number]);
 
-  const artir = () => {
-    setNumber(number + 1);
-  };
+  const increment = useCallback(() => {
+    setNumber((prevState) => prevState + 1);
+  }, []);
+
   return (
     <div className="App">
       {/* <Memo data={data} /> */}
-      <UseMemo />
+      <UseMemo increment={increment} />
       <hr />
       {number}
       <br />
-      <button onClick={artir}>Artir</button>
     </div>
   );
 }
