@@ -1,0 +1,11 @@
+.app {
+  text-align: center;
+}
+.dark {
+  background-color: grey;
+  color: white;
+}
+.light {
+  background-color: white;
+  color: black;
+}
